@@ -131,7 +131,7 @@ fun HomeScreen(navController: NavController){
                     contentAlignment = Alignment.Center
                 ){
                     Text(
-                        text = "S",
+                        text = "J",
                         color = colors.primary
                     )
                 }
@@ -244,6 +244,10 @@ fun HomeScreen(navController: NavController){
             }
         }
 
+        item {
+            Spacer(modifier = Modifier.height(24.dp))
+        }
+
         // Ideas rapidas
         item {
             val tags = listOf(
@@ -255,7 +259,8 @@ fun HomeScreen(navController: NavController){
             Text(
                 text = "Ideas Rápidas",
                 color = colors.onSurface,
-                fontSize = 15.sp
+                style = MaterialTheme.typography.titleMedium,
+                fontSize = 30.sp
             )
             Spacer(Modifier.height(10.dp))
             LazyRow(
@@ -332,7 +337,6 @@ fun HomeScreen(navController: NavController){
             Spacer(modifier = Modifier.height(20.dp))
         }
 
-        //Todas tus recetas
         // SECCIÓN: "Todas tus recetas"
         item {
             Spacer(Modifier.height(16.dp))
@@ -346,7 +350,7 @@ fun HomeScreen(navController: NavController){
             Spacer(Modifier.height(16.dp))
         }
 
-// LISTA VERTICAL DE TODAS LAS RECETAS
+        // LISTA VERTICAL DE TODAS LAS RECETAS
         items(vm.recipes) { recipe ->
             RecipeRowItem(
                 recipe = recipe,
